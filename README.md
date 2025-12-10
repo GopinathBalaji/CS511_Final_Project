@@ -6,10 +6,6 @@ This project aims to benchmark the performance of speculative decoding in vLLM, 
 
 Speculative decoding is a technique to accelerate text generation from language models by allowing the model to “speculate” multiple tokens ahead. This reduces latency and improves throughput without significantly impacting the quality of the generated text. vLLM provides support for speculative decoding, making it easier to leverage this technique for faster inference.
 
-### Relevant Resources:
-- **Blog Post**: [Accelerating Language Model Decoding via Speculative Sampling](#)
-- **vLLM GitHub Repository**: [vLLM Project](#)
-- **Research Paper**: [Accelerating Text Generation with Speculative Decoding](#)
 
 ## Installation
 
