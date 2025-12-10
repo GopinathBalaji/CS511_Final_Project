@@ -1,0 +1,40 @@
+# config.yaml
+
+# Experiment parameters
+num_requests_list:
+  - 32
+  - 128
+  - 512
+
+batch_size_list:
+  - 1
+  - 2
+  - 8
+  - 16
+
+speculative_models:
+  - null 
+  - '[ngram]' 
+  - facebook/opt-125m
+  - facebook/opt-350m
+
+# Model settings
+target_model_name: facebook/opt-1.3b
+num_speculative_tokens_list:
+  - 1
+  - 3
+  - 5
+  - 10
+
+gpu_memory_utilization: 0.9
+
+
+# N-gram model settings
+ngram_prompt_lookup_max: 4
+ngram_prompt_lookup_min: 1
+
+# Prompt settings
+base_prompt: "Introduction This extensive evaluation is designed to assess the capabilities of a Very Large Language Model (VLLM) across multiple domains, including but not limited to general knowledge, creative writing, logical reasoning, scientific understanding, linguistic skills, and ethical reasoning. The following series of tasks and questions are intended to probe the depth and breadth of the model's abilities. Please respond to each prompt to the best of your ability. If a task is unclear or seems impossible, please state so and explain why. Your responses will be evaluated for accuracy, coherence, creativity, and depth of understanding.  Section 1: General Knowledge 1.1 History 1.1.1 Describe the major events of World War II in chronological order. 1.1.2 Explain the significance of the French Revolution and its impact on modern democracy. 1.1.3 Compare and contrast the Roman Empire and the Han Dynasty. 1.1.4 Discuss the role of the Silk Road in ancient global trade. 1.1.5 Analyze the causes and consequences of the Industrial Revolution."
+
+# Output settings
+output_csv: 'vllm_benchmark_results_3080_3.csv'
